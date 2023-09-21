@@ -18,7 +18,6 @@
         "description": "Lets New Wails file",
         "iconName": "fileIcon",
         "role": "Editor",
-        "mimeType": "foo"
       },
       {
         "ext": "ppshenkin",
@@ -26,7 +25,6 @@
         "description": "Pshenkin file",
         "iconName": "pshenkin",
         "role": "Editor",
-        "mimeType": "foo"
       }
     ]
   }
