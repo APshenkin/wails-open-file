@@ -17,14 +17,14 @@
         "name": "Lets Test Wails",
         "description": "Lets New Wails file",
         "iconName": "fileIcon",
-        "role": "Editor",
+        "role": "Editor"
       },
       {
         "ext": "ppshenkin",
         "name": "Test Pshenkin File",
         "description": "Pshenkin file",
         "iconName": "pshenkin",
-        "role": "Editor",
+        "role": "Editor"
       }
     ]
   }
