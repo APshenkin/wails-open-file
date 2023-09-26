@@ -27,14 +27,14 @@ contents:
   dst: /usr/share/mime/packages/application-x-ppshenkin.xml
 - src: ../appicon.svg
   dst: /usr/share/icons/hicolor/scalable/apps/wails-open-file.svg
-- src: ../fileIcon.svg
+- src: ../fileicon.svg
   dst: /usr/share/icons/hicolor/scalable/mimetypes/application-x-wwwails.svg
 - src: ../pshenkin.svg
   dst: /usr/share/icons/hicolor/scalable/mimetypes/application-x-ppshenkin.svg
 # copy icons to Yaru theme as well. For some reason Ubuntu didn't pick up fileicons from hicolor theme
 - src: ../appicon.svg
   dst: /usr/share/icons/Yaru/scalable/apps/wails-open-file.svg
-- src: ../fileIcon.svg
+- src: ../fileicon.svg
   dst: /usr/share/icons/Yaru/scalable/mimetypes/application-x-wwwails.svg
 - src: ../pshenkin.svg
   dst: /usr/share/icons/Yaru/scalable/mimetypes/application-x-ppshenkin.svg
