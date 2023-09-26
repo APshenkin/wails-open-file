@@ -27,6 +27,12 @@ func main() {
 		OnStartup:        app.startup,
 		OnFileOpen:       app.onFileOpen,
 		OnFilesOpen:      app.onFilesOpen,
+		SingleInstanceLock: &options.SingleInstanceLock{
+			UniqueID:                      "e3984e08-28dc-4e3d-b70a-45e961589cdc",
+			Enabled:                       true,
+			ActivateAppOnSubsequentLaunch: true,
+			OnSecondInstanceLaunch:        app.onSecondInstanceLaunch,
+		},
 		Bind: []interface{}{
 			app,
 		},

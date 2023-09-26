@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
@@ -13,6 +14,7 @@ var wailsContext *context.Context
 
 var filestring = ""
 var filestrings []string
+var secondInstanceArgs []string
 
 // App struct
 type App struct {
@@ -61,6 +63,13 @@ func (a *App) onFilesOpen(filePaths []string) {
 
 	println("user opened associated files", strings.Join(filePaths, ","))
 	go runtime.EventsEmit(*wailsContext, "filesOpened", filePaths)
+}
+
+func (a *App) onSecondInstanceLaunch(secondInstanceData options.SecondInstanceData) {
+	secondInstanceArgs = secondInstanceData.Args
+
+	println("user opened second instance", strings.Join(secondInstanceData.Args, ","))
+	go runtime.EventsEmit(*wailsContext, "launchArgs", secondInstanceArgs)
 }
 
 // Greet returns a greeting for the given name
