@@ -45,7 +45,7 @@ func (a *App) startup(ctx context.Context) {
 			runtime.EventsEmit(ctx, "filesOpened", filestrings)
 		}
 		if len(argsWithoutProg) != 0 {
-			println("launchArgs", argsWithoutProg)
+			println("startup arguments", strings.Join(argsWithoutProg, ","))
 			runtime.EventsEmit(ctx, "launchArgs", argsWithoutProg)
 		}
 	})
@@ -69,6 +69,7 @@ func (a *App) onSecondInstanceLaunch(secondInstanceData options.SecondInstanceDa
 	secondInstanceArgs = secondInstanceData.Args
 
 	println("user opened second instance", strings.Join(secondInstanceData.Args, ","))
+	runtime.Show(*wailsContext)
 	go runtime.EventsEmit(*wailsContext, "launchArgs", secondInstanceArgs)
 }
 
