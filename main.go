@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"github.com/wailsapp/wails/v2/pkg/options/mac"
 
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -25,8 +26,9 @@ func main() {
 		},
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
 		OnStartup:        app.startup,
-		OnFileOpen:       app.onFileOpen,
-		OnFilesOpen:      app.onFilesOpen,
+		Mac: &mac.Options{
+			OnFileOpen: app.onFileOpen,
+		},
 		Bind: []interface{}{
 			app,
 		},
