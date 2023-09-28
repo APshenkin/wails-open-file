@@ -69,6 +69,7 @@ func (a *App) onSecondInstanceLaunch(secondInstanceData options.SecondInstanceDa
 	secondInstanceArgs = secondInstanceData.Args
 
 	println("user opened second instance", strings.Join(secondInstanceData.Args, ","))
+	println("user opened second from", secondInstanceData.WorkingDirectory)
 	runtime.WindowUnminimise(*wailsContext)
 	runtime.Show(*wailsContext)
 	go runtime.EventsEmit(*wailsContext, "launchArgs", secondInstanceArgs)
