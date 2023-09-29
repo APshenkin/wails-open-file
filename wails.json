@@ -29,8 +29,8 @@
     ],
     "protocols": [
       {
-        "name": "my-app",
         "scheme": "pshenkin",
+        "description": "Pshenkin protocol",
         "role": "Editor"
       }
     ]
