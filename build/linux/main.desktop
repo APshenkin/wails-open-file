@@ -5,4 +5,4 @@ Icon=wails-open-file.png
 Name=wails-open-file
 Terminal=false
 Type=Application
-MimeType=application/x-wwwails;application/x-ppshenkin
+MimeType=application/x-wwwails;application/x-ppshenkin;x-scheme-handler/pshenkin;
