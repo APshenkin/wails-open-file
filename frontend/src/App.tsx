@@ -18,7 +18,7 @@ function App() {
     // subscribe to file opened event
     EventsOn("fileOpened", (str: string) => updateResultText(`file association support! file is opened ${str}`))
     // subscribe to file opened event
-    EventsOn("filesOpened", (str: string[]) => updateResultText(`file association support! files are opened ${str}`))
+    EventsOn("customUrlOpened", (str: string) => updateResultText(`custom url is opened ${str}`))
     // subscribe to launch Args event
     EventsOn("launchArgs", (str: string[]) => updateResultText(`launch args ${str}`))
     // emit frontEndLoaded event to backend

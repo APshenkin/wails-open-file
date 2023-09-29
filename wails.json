@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/APshenkin/wails/feature/open-files/website/static/schemas/config.v2.json",
+  "$schema": "https://raw.githubusercontent.com/APshenkin/wails/feature/deeplinks/website/static/schemas/config.v2.json",
   "name": "wails-open-file",
   "outputfilename": "wails-open-file",
   "frontend:install": "npm install",
@@ -24,6 +24,13 @@
         "name": "Test Pshenkin File",
         "description": "Pshenkin file",
         "iconName": "pshenkin",
+        "role": "Editor"
+      }
+    ],
+    "protocols": [
+      {
+        "name": "my-app",
+        "scheme": "pshenkin",
         "role": "Editor"
       }
     ]

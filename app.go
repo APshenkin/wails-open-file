@@ -13,7 +13,7 @@ import (
 var wailsContext *context.Context
 
 var filestring = ""
-var filestrings []string
+var urlstring = ""
 var secondInstanceArgs []string
 
 // App struct
@@ -40,9 +40,9 @@ func (a *App) startup(ctx context.Context) {
 			println("startup file", filestring)
 			runtime.EventsEmit(ctx, "fileOpened", filestring)
 		}
-		if len(filestrings) != 0 {
-			println("startup files", filestrings)
-			runtime.EventsEmit(ctx, "filesOpened", filestrings)
+		if urlstring != "" {
+			println("startup deeplink string", urlstring)
+			runtime.EventsEmit(ctx, "customUrlOpened", urlstring)
 		}
 		if len(argsWithoutProg) != 0 {
 			println("startup arguments", strings.Join(argsWithoutProg, ","))
@@ -58,11 +58,11 @@ func (a *App) onFileOpen(filePath string) {
 	println("user opened associated file", filePath)
 }
 
-func (a *App) onFilesOpen(filePaths []string) {
-	filestrings = filePaths
+func (a *App) onUrlOpen(url string) {
+	urlstring = url
+	go runtime.EventsEmit(*wailsContext, "customUrlOpened", urlstring)
 
-	println("user opened associated files", strings.Join(filePaths, ","))
-	go runtime.EventsEmit(*wailsContext, "filesOpened", filePaths)
+	println("user opened deeplink", urlstring)
 }
 
 func (a *App) onSecondInstanceLaunch(secondInstanceData options.SecondInstanceData) {

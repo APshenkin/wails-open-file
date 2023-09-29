@@ -32,6 +32,7 @@ func main() {
 		},
 		Mac: &mac.Options{
 			OnFileOpen: app.onFileOpen,
+			OnUrlOpen:  app.onUrlOpen,
 		},
 		Bind: []interface{}{
 			app,
