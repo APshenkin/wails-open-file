@@ -27,7 +27,6 @@ func main() {
 		OnStartup:        app.startup,
 		SingleInstanceLock: &options.SingleInstanceLock{
 			UniqueId:               "e3984e08-28dc-4e3d-b70a-45e961589cdc",
-			Enabled:                true,
 			OnSecondInstanceLaunch: app.onSecondInstanceLaunch,
 		},
 		Mac: &mac.Options{
