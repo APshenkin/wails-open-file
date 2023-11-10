@@ -34,5 +34,10 @@
         "role": "Editor"
       }
     ]
+  },
+  "bindings": {
+    "ts_generation": {
+      "outputType": "interfaces"
+    }
   }
 }

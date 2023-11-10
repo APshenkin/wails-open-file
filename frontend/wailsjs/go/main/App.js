@@ -5,3 +5,11 @@
 export function Greet(arg1) {
   return window['go']['main']['App']['Greet'](arg1);
 }
+
+export function Second(arg1) {
+  return window['go']['main']['App']['Second'](arg1);
+}
+
+export function Third() {
+  return window['go']['main']['App']['Third']();
+}

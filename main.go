@@ -36,6 +36,9 @@ func main() {
 		Bind: []interface{}{
 			app,
 		},
+		EnumBind: []interface{}{
+			AllWeekdays,
+		},
 	})
 
 	if err != nil {

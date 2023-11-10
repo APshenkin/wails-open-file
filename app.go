@@ -79,3 +79,52 @@ func (a *App) onSecondInstanceLaunch(secondInstanceData options.SecondInstanceDa
 func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
+
+type Test struct {
+	Foo string `json:"foo"`
+}
+
+func (a *App) Second(name string) *Test {
+	return &Test{
+		Foo: name,
+	}
+}
+
+func (a *App) Third() Weekday {
+	return Sunday
+}
+
+type Weekday string
+
+const (
+	Sunday    Weekday = "Sunday"
+	Monday    Weekday = "Monday"
+	Tuesday   Weekday = "Tuesday"
+	Wednesday Weekday = "Wednesday"
+	Thursday  Weekday = "Thursday"
+	Friday    Weekday = "Friday"
+	Saturday  Weekday = "Saturday"
+)
+
+var AllWeekdays = []Weekday{Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
+
+func (w Weekday) TSName() string {
+	switch w {
+	case Sunday:
+		return "SUNDAY"
+	case Monday:
+		return "MONDAY"
+	case Tuesday:
+		return "TUESDAY"
+	case Wednesday:
+		return "WEDNESDAY"
+	case Thursday:
+		return "THURSDAY"
+	case Friday:
+		return "FRIDAY"
+	case Saturday:
+		return "SATURDAY"
+	default:
+		return "???"
+	}
+}
