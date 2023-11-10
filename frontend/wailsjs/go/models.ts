@@ -11,6 +11,16 @@ export namespace main {
 	}
 	export interface Test {
 	    foo: string;
+	    day: Weekday;
+	}
+
+}
+
+export namespace test {
+	
+	export enum Fruits {
+	    Banana = "Banana",
+	    Orange = "Orange",
 	}
 
 }

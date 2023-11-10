@@ -1,6 +1,7 @@
 package main
 
 import (
+	"changeme/test"
 	"context"
 	"fmt"
 	"os"
@@ -81,17 +82,23 @@ func (a *App) Greet(name string) string {
 }
 
 type Test struct {
-	Foo string `json:"foo"`
+	Foo string  `json:"foo"`
+	Day Weekday `json:"day"`
 }
 
 func (a *App) Second(name string) *Test {
 	return &Test{
 		Foo: name,
+		Day: Monday,
 	}
 }
 
 func (a *App) Third() Weekday {
 	return Sunday
+}
+
+func (a *App) Fruit() test.Fruit {
+	return test.Banana
 }
 
 type Weekday string

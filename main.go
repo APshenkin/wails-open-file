@@ -1,6 +1,7 @@
 package main
 
 import (
+	"changeme/test"
 	"embed"
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
@@ -38,6 +39,7 @@ func main() {
 		},
 		EnumBind: []interface{}{
 			AllWeekdays,
+			test.AllFruits,
 		},
 	})
 
