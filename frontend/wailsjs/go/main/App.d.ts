@@ -3,7 +3,7 @@
 import {test} from '../models';
 import {main} from '../models';
 
-export function Fruit():Promise<test.Fruits>;
+export function Fruit():Promise<test.Fruit>;
 
 export function Greet(arg1:string):Promise<string>;
 

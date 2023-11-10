@@ -18,9 +18,13 @@ export namespace main {
 
 export namespace test {
 	
-	export enum Fruits {
-	    Banana = "Banana",
-	    Orange = "Orange",
+	export enum Fruit {
+	    B = "Banana",
+	    O = "Orange",
+	}
+	export enum Color {
+	    G = "Green",
+	    B = "Blue",
 	}
 
 }

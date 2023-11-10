@@ -40,6 +40,7 @@ func main() {
 		EnumBind: []interface{}{
 			AllWeekdays,
 			test.AllFruits,
+			test.AllColors,
 		},
 	})
 
